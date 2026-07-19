@@ -1,0 +1,34 @@
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.stat-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-1);
+}
+.stat-card-icon-navy { background: var(--color-navy-tint); color: var(--color-navy); }
+.stat-card-icon-emerald { background: var(--color-emerald-tint); color: var(--color-emerald-deep); }
+.stat-card-icon-gold { background: var(--color-gold-tint); color: var(--color-gold-deep); }
+
+.stat-card-label {
+  font-size: 0.8125rem;
+  color: var(--color-ink-soft);
+  font-weight: 500;
+}
+
+.stat-card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.stat-card-hint {
+  font-size: 0.75rem;
+}

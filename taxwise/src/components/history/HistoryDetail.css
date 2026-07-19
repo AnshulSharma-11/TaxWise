@@ -1,0 +1,43 @@
+.hist-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.hist-detail-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.hist-detail-head h4 { margin-bottom: 2px; }
+
+.hist-detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.hist-detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--color-ink-soft);
+}
+.hist-detail-row.is-strong {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.hist-detail-compare {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  background: var(--color-paper-alt);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}

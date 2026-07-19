@@ -1,0 +1,176 @@
+.landing { padding-bottom: var(--space-8); }
+
+/* ---- Hero ---- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: var(--space-8);
+  align-items: center;
+  padding-block: var(--space-7) var(--space-8);
+}
+
+.hero-copy { display: flex; flex-direction: column; gap: var(--space-5); }
+
+.hero-copy h1 { max-width: 15ch; }
+.hero-highlight { color: var(--color-emerald-deep); }
+
+.hero-sub {
+  font-size: 1.0625rem;
+  color: var(--color-ink-soft);
+  max-width: 46ch;
+}
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.hero-fineprint { font-size: 0.8125rem; }
+
+.hero-visual { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
+
+.receipt {
+  width: 100%;
+  max-width: 340px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-5) var(--space-5) var(--space-6);
+  position: relative;
+  transform: rotate(1.5deg);
+  --notch: radial-gradient(circle at 8px 8px, transparent 8px, var(--color-paper) 8.5px) -8px 0 / 16px 16px repeat-x;
+}
+
+.receipt::before,
+.receipt::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 8px;
+  background: var(--notch);
+}
+.receipt::before { top: -1px; }
+.receipt::after { bottom: -1px; transform: rotate(180deg); }
+
+.receipt-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-4);
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.9375rem;
+  padding-block: var(--space-1);
+}
+
+.receipt .divider { margin-block: var(--space-3); }
+
+.receipt-compare {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.receipt-regime {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1.5px dashed var(--color-border-strong);
+}
+.receipt-regime.is-winner {
+  border-style: solid;
+  border-color: var(--color-emerald);
+  background: var(--color-emerald-tint);
+}
+.receipt-amount { font-size: 1.0625rem; font-weight: 600; }
+
+.receipt-savings { font-weight: 600; color: var(--color-emerald-deep); }
+
+.hero-visual-caption { font-size: 0.75rem; }
+
+/* ---- Features ---- */
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  max-width: 60ch;
+}
+
+.features { padding-block: var(--space-7); }
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.feature-card { display: flex; flex-direction: column; gap: var(--space-3); }
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--color-emerald-tint);
+  color: var(--color-emerald-deep);
+}
+
+/* ---- Steps ---- */
+.steps-section {
+  background: var(--color-navy);
+  color: #fff;
+  padding-block: var(--space-8);
+  margin-block: var(--space-7);
+}
+.steps-section .eyebrow { color: var(--color-gold-tint); }
+.steps-section h2 { color: #fff; }
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.step { display: flex; flex-direction: column; gap: var(--space-2); }
+.step-number {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-gold-tint);
+  opacity: 0.85;
+}
+.step h3 { color: #fff; }
+.step p { color: rgba(255, 255, 255, 0.72); }
+
+/* ---- CTA band ---- */
+.cta-band { padding-block: var(--space-6); }
+.cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  background: var(--color-gold-tint);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-7);
+}
+.cta-card h2 { margin-bottom: var(--space-1); }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding-block: var(--space-6); }
+  .hero-visual { order: -1; }
+  .hero-copy h1 { max-width: none; }
+  .feature-grid, .steps-grid { grid-template-columns: 1fr; }
+  .cta-card { flex-direction: column; align-items: flex-start; }
+}
